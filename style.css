@@ -1,0 +1,399 @@
+
+/*-------------GENERAL----------------*/
+
+*,
+*::before *::after {
+    font-family:Geneva, Tahoma, Verdana, sans-serif;
+    box-sizing: border-box;
+    color: #f9faf8;
+
+} /* not sure what this code means */
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  color: #884061;
+  font-size: 12px;
+  top:3%;
+  left:82%;
+ 
+}
+
+.header-link:hover .tooltip-text {
+  visibility: visible;
+}
+
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    * {
+      flex-direction: column; /* Stack items vertically */
+      flex-wrap: wrap; /* Allow wrapping */
+    }
+  } /* not sure what this code means */
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;    
+}
+
+.sections{
+height: 30vw;
+} /* not sure what this code means */
+
+
+/*-------------------------HEADER-----------------*/
+
+a {
+    text-decoration: none;
+    color: #f8f2e8;
+    overflow: hidden; /* not sure what this code means */
+    font-weight: bold;
+    position: relative; /* not sure what this code means */
+    display: inline-block;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+a::before,
+a::after {
+ content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+} /* not sure what this code means */
+
+a::before {
+    background-color: #ffffff;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  } /* not sure what this code means */
+
+
+  a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #ffffff;
+  } /* not sure what this code means */
+  
+
+  :hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  } /* not sure what this code means */
+
+
+  a:hover::after {
+    transform: translate3d(0, 0, 0);
+  } /* not sure what this code means */
+  
+  a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  } /* not sure what this code means */
+  
+  a:hover span {
+    transform: translate3d(-200%, 0, 0);
+  } /* not sure what this code means */
+
+
+
+
+
+
+
+
+
+/* ---------------------SECTION 1-----------------*/
+
+.section-1{
+    background-color:#501e34;
+    height:480px;
+    color:#f8f2e8;
+}
+
+.container-1{
+    width:80%;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 15px 0px;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 40px;
+    padding: 0px 20px 5px 0px;
+  }
+
+
+  .header-links{
+    display: flex;
+    justify-content: space-evenly;
+    font-size:18px;
+    font-weight: 100;
+  }
+
+  .header-link-1,
+.header-link-2 {
+    margin-right:20px;
+}
+
+.header-link-3 {
+    margin-right: 2px;
+
+}
+
+.container-2{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:220px;
+    gap:50px;
+    margin-top:90px;
+    margin-bottom: 90px;
+
+}
+
+ 
+.text-and-button {
+    width:40%;
+}
+
+.abc{
+margin: 0 0 20px 0;
+padding:0;
+height:100%;
+font-weight:100;
+font-size:18px;
+}
+
+h1{
+    font-size: 48px;
+    font-weight: 800;
+    margin:0;
+    padding:0;
+
+}
+
+.text-and-button .button{
+    margin-top: auto;
+    width:80px;
+}
+
+.button{
+    background-color:#2d1f1f;
+    color:#F9FAF8;
+    border: 2px solid #2d1f1f;
+    color:#F9FAF8;
+    border-radius:8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 10);
+    font-size: 15px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-image: linear-gradient(90deg, #300914 0%, #3c0c1e 16.65%, #4d1027 33.3%, #480e1c 49.95%, #430e2a 66.6%, #3f0e20 83.25%, #571329 100%);
+    border-color: #420b1b;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px); /* not sure what this code means */
+    animation: slidebg 5s linear infinite; /* not sure what this code means */
+  }
+
+  @keyframes slidebg {
+    to {
+      background-position: 20vw;
+    } /* not sure what this code means */
+}
+.image img{
+    height: 100%;
+    width: 500px;
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------------------SECTION 2-----------------*/
+.info-container {
+    padding: 20px 200px;
+    color: var(--light-background-primary-text-color);
+    background-color: #f8f2e8;
+  }
+  
+  .info-container h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bolder;
+  }
+  
+  .info-container ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
+  }
+  
+  .info-container ul li {
+    text-align: center;
+    margin:5px;
+  }
+  
+  .info-card {
+    font-size: 13px;
+    width: 165px;
+    height: 250px;
+    padding: 8px;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .15);
+    border-radius: 10px;
+  }
+  
+  .info-card img {
+    object-fit: cover;
+    height: 120px;
+    width: 165px;
+    border-radius: 10px;
+  }
+  
+  
+  
+
+
+
+
+
+
+
+/* ---------------------SECTION 3-----------------*/
+.section-3 {
+    height: 480px;
+    background-color: rgb(219, 182, 182);
+    display: flex;
+    justify-content: center;
+}
+
+.container-4 {
+    width:65%;
+    margin: auto auto;
+}
+
+.quote{
+    font-size: 36px;
+    font-weight: lighter;
+    font-style: italic;
+    color:#501e34;
+    margin:0;
+    padding:0;
+
+}
+
+.author{
+    font-size: 24px;
+    text-align: right;
+    color:#501e34;
+    margin-top: 0;
+    margin-right: 48px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ---------------------SECTION 4-----------------*/
+
+.section-4{
+    height:400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#f8f2e8;
+
+
+}
+
+.call-container{
+    width:80%;
+    background-color: #501e34;
+    height:180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F9FAF8;
+
+}
+
+.call-text-area{
+    margin: auto 0;
+    width: 63%;
+
+
+}
+
+.call-header{
+    font-size: 24px;
+    margin:0;
+    padding:0;
+
+}
+
+.call-info{
+    font-size: 18px;
+    font-weight: lighter;
+    margin:0;
+    padding:0;
+
+}
+
+
+
+
+
+
+
+/* ---------------------FOOTER-----------------*/
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#F9FAF8;
+    height:80px;
+    background-color:#2d1f1f;
+
+}
